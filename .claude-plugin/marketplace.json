@@ -12,7 +12,7 @@
       "name": "phasis",
       "source": "./plugins/phasis",
       "description": "Agents that know the job and the world.",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "category": "productivity"
     }
   ]

@@ -13,6 +13,14 @@ You stay in control of what the agent learns. You can see, confirm and stop each
 - One skill, `phasis-rules`. It tells the agent to read your saved rules and decisions at the start of work and to save each rule or decision that you state.
 - The Phasis connector at `https://mcp.phas.is/mcp`. The skill uses its tools.
 
+## Install
+
+In Claude Code:
+
+```
+/plugin install phasis --marketplace phasis-ai/plugins
+```
+
 ## What you need
 
 - A Phasis account. Sign up at [phasis.ai](https://phasis.ai).

@@ -1,7 +1,7 @@
 {
   "name": "phasis",
   "displayName": "Phasis",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Agents that know the job and the world.",
   "author": {
     "name": "Phasis",
@@ -9,6 +9,7 @@
     "url": "https://phasis.ai"
   },
   "homepage": "https://phasis.ai",
+  "repository": "https://github.com/phasis-ai/plugins",
   "license": "Apache-2.0",
   "keywords": ["rules", "decisions", "learning", "team", "roles"],
   "icon": "./assets/icon.png",
