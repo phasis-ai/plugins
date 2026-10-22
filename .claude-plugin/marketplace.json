@@ -1,0 +1,19 @@
+{
+  "name": "phasis",
+  "owner": {
+    "name": "Phasis",
+    "email": "support@phas.is"
+  },
+  "metadata": {
+    "description": "Phasis: agents that know the job and the world."
+  },
+  "plugins": [
+    {
+      "name": "phasis",
+      "source": "./plugins/phasis",
+      "description": "Agents that know the job and the world.",
+      "version": "0.1.4",
+      "category": "productivity"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "phasis",
+  "displayName": "Phasis",
+  "version": "0.1.4",
+  "description": "Agents that know the job and the world.",
+  "author": {
+    "name": "Phasis",
+    "email": "support@phas.is",
+    "url": "https://phasis.ai"
+  },
+  "homepage": "https://phasis.ai",
+  "license": "Apache-2.0",
+  "keywords": ["rules", "decisions", "learning", "team", "roles"],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://phasis.ai/setup",
+  "supportUrl": "https://phasis.ai/support",
+  "privacyPolicyUrl": "https://phasis.ai/privacy",
+  "termsOfServiceUrl": "https://phasis.ai/terms"
+}
