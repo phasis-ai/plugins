@@ -3,8 +3,9 @@
 
 Archived copy appears in quotation marks only inside the quote block that quote_block.py writes (between its start and
 end markers). Inside the block, a quote must be a whole field value of a capture, a change row or a value run, or the
-start of such a value cut at a word boundary and ended with an ellipsis. Any quote outside the block is refused: the
-prose may describe a change, but it never quotes. With --block, the block in the answer must equal quotes.md.
+start of such a value cut at a word boundary and ended with an ellipsis; a double quote inside a value counts as an
+apostrophe. Any quote outside the block is refused: the prose may describe a change, but it never quotes. With --block,
+the block in the answer must equal quotes.md.
 
 Usage: python3 -I check_quotes.py answer.md evolution-<domain>.json [more result files] [--block quotes.md]
 Prints a JSON summary. Exit 0 when every quote is allowed; exit 1 when something is refused: fix it and run again.
@@ -22,15 +23,20 @@ START = "<!-- evolution-quotes:start (paste unchanged) -->"
 END = "<!-- evolution-quotes:end -->"
 
 
+def inner(s):
+    """A double quote inside a value becomes an apostrophe (as quote_block.py writes it), so QUOTE reads it whole."""
+    return ev.norm(s).replace('"', "'")
+
+
 def values(res):
-    out = {ev.norm(res.get("label", ""))}
+    out = {inner(res.get("label", ""))}
     for c in res.get("captures", []):
         for v in (c.get("copy") or {}).values():
-            out.update(ev.norm(x) for x in (v if isinstance(v, list) else [v]) if isinstance(x, str))
+            out.update(inner(x) for x in (v if isinstance(v, list) else [v]) if isinstance(x, str))
     for r in res.get("rows", []):
-        out.update({ev.norm(r["before"]), ev.norm(r["after"])})
+        out.update({inner(r["before"]), inner(r["after"])})
     for rr in res.get("runs", {}).values():
-        out.update(ev.norm(x["value"]) for x in rr if x.get("value"))
+        out.update(inner(x["value"]) for x in rr if x.get("value"))
     return {v for v in out if v}
 
 

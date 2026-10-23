@@ -229,7 +229,8 @@ def render(inp):
         g.append("</g>")
         body.append("".join(g))
     y += 4
-    notes = ["The source's own department and team labels, copied as written. A department is a source classification,",
+    notes = ["Built from current job postings, not an official org chart.",
+             "The source's own department and team labels, copied as written. A department is a source classification,",
              "not a reporting line."]
     nf = [x for x in inp.get("not_found") or [] if isinstance(x, str) and x.strip()]
     if nf:

@@ -3,8 +3,9 @@
 
 The block is the only place in an answer where archived copy appears in quotation marks. Every quote in it comes from
 the result file and starts at the start of its field value (a value over 104 characters is already cut at a word
-boundary with an ellipsis). Every quote carries its capture date and its capture link. The script checks the block
-with check_quotes.py before it writes it. Paste the block into the answer unchanged.
+boundary with an ellipsis). A double quote inside the copy is written as an apostrophe. Every quote carries its capture
+date and its capture link. The script checks the block with check_quotes.py before it writes it. Paste the block into the
+answer unchanged.
 
 Sections (choose what the question needs):
   --runs     value runs, each value with its first and last capture   (default: title,h1,meta_description)
@@ -32,7 +33,8 @@ RUN_KEY = {"title": "title", "h1": "headline", "meta_description": "meta_descrip
 
 
 def q(s):
-    return f"\"{s}\""
+    """A quote in double quotation marks. A double quote inside the copy becomes an apostrophe, so the quote stays whole."""
+    return f"\"{check_quotes.inner(s)}\""
 
 
 def cap(date, url):

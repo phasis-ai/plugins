@@ -16,14 +16,14 @@ The Phasis plugin is in [plugins/phasis](plugins/phasis). Its [README](plugins/p
 
 Ask for the org chart of a company, and your agent draws a department view from the company's current job postings. It reads the company's own public job feed, keeps each department and team exactly as the company names it, and lists every open role. You get a chart file and the list of roles.
 
-- What it needs: Claude Code with web access.
+- What it needs: Claude Code with web access and Python 3.
 - Every role comes from a public job posting, with its link and the date it was read. The chart shows how the company groups its open jobs. It does not show who reports to whom.
 
 ## Evolution
 
 Ask how a company's homepage changed, and your agent shows how the headline, description, buttons and prices changed over time. It reads saved copies of the homepage from the Internet Archive (Wayback Machine) and compares them. You get a card that shows the changes and short quotes of the copy.
 
-- What it needs: Claude Code with web access.
+- What it needs: Claude Code with web access and Python 3.
 - Every quote comes from a public Internet Archive copy, with its link and its date.
 
 ## Support

@@ -3,7 +3,7 @@ name: phasis-evolution
 description: "Shows how a website's homepage copy changed over time (headline, description, nav, buttons, prices), read from Internet Archive captures, with a capture link and date on every quote. Use when someone asks how a company's homepage, positioning, messaging, offer or pricing changed, what a site said in a past period, or gives Wayback Machine capture timestamps to compare. Not for the live page today or for pages the Archive did not capture."
 tool: none (skill only; the served tool evolution@1 is planned)
 label: "From the Internet Archive, captures <first date> to <last date>, not yet checked"
-cost: "No Phasis cost in a host with Bash (public Internet Archive reads, about 13 requests and 1 minute per site). In a host without Bash, each Phasis web_fetch call counts against your daily allowance."
+cost: "No Phasis cost (public Internet Archive reads in Claude Code, about 13 requests and 1 minute per site)."
 ---
 
 # How a website's copy changed
@@ -98,6 +98,8 @@ Definitions:
      buttons, prices.
 
    It writes `quotes.md`: every quote with its capture date and capture link, each quote from the start of its field.
+   A double quote inside archived copy shows as an apostrophe. If the block holds a person's name (for example in a
+   testimonial), run `quote_block.py` again without that section.
 6. Write the answer to `answer.md` in the working folder: the label line, the data line, the block from `quotes.md`
    pasted unchanged (with its two marker lines), then your explanation. The explanation may describe a change in your
    own words, but it never uses quotation marks. Then check it:
@@ -111,17 +113,9 @@ Definitions:
    `answer.md` as your answer. Do not add, remove or reword anything after the check. If you change the text, write it
    to `answer.md` and run the check again.
 
-### How to read without Bash
+### In a host that cannot run commands
 
-In a host without Bash (for example a chat app), use the Phasis connector's `web_fetch` tool (`op: "fetch"`, a new
-`request` id, the `url`). Fetch the CDX list first:
-`https://web.archive.org/cdx/search/cdx?url=<domain>/&matchType=exact&output=json&fl=timestamp,original,statuscode,mimetype,digest,length&filter=statuscode:200&filter=mimetype:text/html&collapse=timestamp:6&limit=500`
-(add `&from=` and `&to=` for a range). Then fetch each chosen capture in its raw form
-`https://web.archive.org/web/<timestamp>id_/<original>`, one at a time, at most 12. Read the title, the meta
-description, the first `h1`, the buttons and the prices from each page, and compare consecutive captures yourself.
-Follow every rule below. Say that you compared the captures by reading them, not with the script.
-Put every quote in one block in the format of `quote_block.py` (one line per quote, with its capture date and link,
-each quote from the start of its field), and use no quotation marks outside it.
+Tell the person that this tool needs Claude Code with web access and Python 3, and stop.
 
 ## What you get
 
@@ -164,6 +158,7 @@ each quote from the start of its field), and use no quotation marks outside it.
 - Never quote archived copy outside the quote block, and never edit the block. Never quote a part from the middle or
   the end of a value. Never send an answer that `check_quotes.py` refuses.
 - Never put personal data in any output: no person's email address, phone number or name from a page.
+- Never attach or share the raw captures in `./evolution-cache`. They are local work files.
 - Never read the Archive faster than 1 request every 2 seconds. Never retry around a 429: stop and report it.
 - Never send an Archive request without the User-Agent `PhasisResearch/1.0 (+https://phas.is/bot)`, also a check
   with curl (`curl -A "PhasisResearch/1.0 (+https://phas.is/bot)" ...`).

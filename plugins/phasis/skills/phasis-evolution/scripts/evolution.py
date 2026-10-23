@@ -47,6 +47,19 @@ class Stop(Exception):
     """The pace budget or a 429 stops the run; the result is partial."""
 
 
+class ArchiveOnlyRedirect(urllib.request.HTTPRedirectHandler):
+    """Follow a redirect only to https://web.archive.org. A redirect to another host is refused with its 3xx status."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        u = urllib.parse.urlsplit(newurl)
+        if u.scheme != "https" or u.hostname != "web.archive.org":
+            raise urllib.error.HTTPError(req.full_url, code, "redirect to another host refused", headers, fp)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+OPENER = urllib.request.build_opener(ArchiveOnlyRedirect)
+
+
 def norm(s):
     s = unicodedata.normalize("NFKC", s or "").replace("’", "'").replace("‘", "'")
     s = s.replace("“", '"').replace("”", '"')
@@ -159,7 +172,7 @@ class Reader:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
             remaining = max(5.0, min(30.0, self.deadline - time.monotonic()))
-            with urllib.request.urlopen(req, timeout=remaining) as r:
+            with OPENER.open(req, timeout=remaining) as r:
                 status, body, final = r.status, r.read(), r.geturl()
         except urllib.error.HTTPError as err:
             status, body = err.code, err.read() or b""
