@@ -10,8 +10,12 @@ You stay in control of what the agent learns. You can see, confirm and stop each
 
 ## What you get in this version
 
-- One skill, `phasis-rules`. It tells the agent to read your saved rules and decisions at the start of work and to save each rule or decision that you state.
-- The Phasis connector at `https://mcp.phas.is/mcp`. The skill uses its tools.
+- The skill `phasis-rules`. It tells the agent to read your saved rules and decisions at the start of work and to save each rule or decision that you state.
+- The skill `phasis-org-charts`. Ask for the org chart of a company, and the agent draws a department view from the company's current job postings, with the link and read date of every role.
+- The skill `phasis-evolution`. Ask how a company's homepage changed, and the agent shows how its headline, description, buttons and prices changed, from Internet Archive copies, with the link and date of every quote.
+- The Phasis connector at `https://mcp.phas.is/mcp`. The `phasis-rules` skill uses its tools.
+
+The org charts and evolution skills need Claude Code with web access. They read only public sources, and every result gives its links and dates. You do not need a Phasis account for them.
 
 ## Install
 
@@ -44,12 +48,13 @@ The skill tells the agent not to save a key, a token or a password, and not to r
 
 ## What the plugin sends, and where
 
-- The skill itself sends nothing. It is text that tells the agent how to use the Phasis connector.
-- The agent sends data only to `mcp.phas.is`, only through the Phasis connector, and only with your own sign-in.
+- The `phasis-rules` skill itself sends nothing. It is text that tells the agent how to use the Phasis connector.
+- For your rules and decisions, the agent sends data only to `mcp.phas.is`, only through the Phasis connector, and only with your own sign-in.
 - The agent sends: the task in a few words; the subject words of a search; a short description of the work when Phasis does not hold that work yet; the job words when you ask who does a job (a job briefing); and the rules, decisions and corrections that you state.
 - Each job briefing counts toward the monthly job-briefing limit of your Phasis plan.
 - Phasis keeps a Receipt of each save and of most reads.
-- This version has no hooks, no commands and no scripts.
+- The org charts skill reads the company's public job feed or careers page (for example Greenhouse, Lever, Ashby, SmartRecruiters or Workday). The evolution skill reads `web.archive.org`. Their requests carry public page addresses and identify themselves as `PhasisResearch/1.0 (+https://phas.is/bot)`. They do not send your name, your account or your rules. In Claude Code, neither skill sends anything to Phasis.
+- The org charts and evolution skills include small Python scripts. They use only the Python standard library and write only to the folder that you work in. This version has no hooks and no commands.
 
 Phasis never moves money. It does not pay, buy or transfer anything. It holds your rules and decisions, and the agent shows them to you.
 
