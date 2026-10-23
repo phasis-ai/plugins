@@ -15,7 +15,7 @@ You stay in control of what the agent learns. You can see, confirm and stop each
 - The skill `phasis-evolution`. Ask how a company's homepage changed, and the agent shows how its headline, description, buttons and prices changed, from Internet Archive copies, with the link and date of every quote.
 - The Phasis connector at `https://mcp.phas.is/mcp`. The `phasis-rules` skill uses its tools.
 
-The org charts and evolution skills need Claude Code with web access. They read only public sources, and every result gives its links and dates. You do not need a Phasis account for them.
+The org charts and evolution skills need Claude Code with web access and Python 3. They read only public sources, and every result gives its links and dates. You do not need a Phasis account for them.
 
 ## Install
 
