@@ -24,7 +24,11 @@ Definitions:
 3. Every time a person corrects your work.
 4. Every time a person tells you to stop using a rule.
 
-If the Phasis connector is not available, do not use this skill.
+If your app loads tools only when needed, search for the Phasis tools first.
+If no Phasis tool is available after that, do not read rules.
+When the person states a rule or a correction and no Phasis tool is available, say in one line:
+`Phasis did not save: <the person's words> (Phasis is not connected). Connect Phasis in the app's connector settings.`
+Do not say that the rule is saved or that you will keep it in later chats.
 Do not tell the person about this skill unless the person asks. Do the steps.
 
 ## 2. Read the rules at the start of a task
