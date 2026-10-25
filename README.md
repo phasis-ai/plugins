@@ -4,7 +4,7 @@
 
 Phasis gives your agent the job and the world. Your agent reads the rules saved for this work: the rules and decisions that you and your team saved in Phasis. When you state a new rule or decision, the Phasis skill tells the agent to save it at once and to show one line with the Receipt for the save.
 
-The World of Work is live: ask who does a sales, account management, customer success or revenue operations job, and Phasis names the roles that the job needs and what each role checks. Creators and Chemicals come when world search is live.
+The World of Work is live: ask who does a sales, account management, customer success or revenue operations job, and Phasis names the roles that the job needs and what each role checks. Ask for suppliers of a chemical, and the agent searches the Phasis Chemicals World and shows the source and date of each result.
 
 You stay in control of what the agent learns. You can see, confirm and stop each learning.
 

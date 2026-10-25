@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.10 (2026-10-25)
+
+- `phasis-rules`: for questions about who does a kind of work, what a role does, who hires for it, or about suppliers, products or chemicals, the skill tells the agent to search the Phasis Worlds with `world_search` before web search or memory, and to show the source and date of each result. The person does not need to name a World.
+- `phasis-rules`: after a shortlist check, the skill tells the agent to name the Receipt of the check in one line.
+- `phasis-rules`: when Phasis is not connected and the person asks to stop a rule, the skill tells the agent to say in one line that Phasis did not stop it. The skill names the words to search for the Phasis tools.
+- Hook: the line no longer says "Phasis is connected". It asks the agent to call `start` if the Phasis tools are available, and to use `world_search` for questions about roles, jobs, employers, suppliers or chemicals. It also asks the agent to name the Receipt id after a check and to show the source and date of each World result.
+
 ## 0.1.9 (2026-10-25)
 
 - README: describes the hook that version 0.1.8 added (the 0.1.8 README said "no hooks"). "Job briefing" is now "role lookup".

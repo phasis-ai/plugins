@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo Phasis is connected. Before you answer a work request, call the Phasis start tool with the task, then follow the saved rules it returns."
+            "command": "echo If the Phasis tools are available, call the Phasis start tool with the task before you answer a work request, then follow the saved rules it returns. For questions about roles, jobs, employers, suppliers or chemicals, use Phasis world_search before web search. After a check, name its Receipt id. Show the source and date of each World result."
           }
         ]
       }
