@@ -50,11 +50,12 @@ The skill tells the agent not to save a key, a token or a password, and not to r
 
 - The `phasis-rules` skill itself sends nothing. It is text that tells the agent how to use the Phasis connector.
 - For your rules and decisions, the agent sends data only to `mcp.phas.is`, only through the Phasis connector, and only with your own sign-in.
-- The agent sends: the task in a few words; the subject words of a search; a short description of the work when Phasis does not hold that work yet; the job words when you ask who does a job (a job briefing); and the rules, decisions and corrections that you state.
-- Each job briefing counts toward the monthly job-briefing limit of your Phasis plan.
+- The agent sends: the task in a few words; the subject words of a search; a short description of the work when Phasis does not hold that work yet; the job words when you ask who does a job (a role lookup); and the rules, decisions and corrections that you state.
+- Each role lookup counts toward the monthly role-lookup limit of your Phasis plan.
 - Phasis keeps a Receipt of each save and of most reads.
 - The org charts skill reads the company's public job feed or careers page (for example Greenhouse, Lever, Ashby, SmartRecruiters or Workday). The evolution skill reads `web.archive.org`. Their requests carry public page addresses and identify themselves as `PhasisResearch/1.0 (+https://phas.is/bot)`. They do not send your name, your account or your rules. In Claude Code, neither skill sends anything to Phasis.
-- The org charts and evolution skills include small Python scripts. They use only the Python standard library and write only to the folder that you work in. This version has no hooks and no commands.
+- The org charts and evolution skills include small Python scripts. They use only the Python standard library and write only to the folder that you work in.
+- Since version 0.1.8, the plugin has one hook. When you send a prompt, the hook adds this line for the agent: "Phasis is connected. Before you answer a work request, call the Phasis start tool with the task, then follow the saved rules it returns." The hook only prints that line. It sends nothing and writes no file. The plugin has no slash commands.
 
 Phasis never moves money. It does not pay, buy or transfer anything. It holds your rules and decisions, and the agent shows them to you.
 

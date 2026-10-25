@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.9 (2026-10-25)
+
+- README: describes the hook that version 0.1.8 added (the 0.1.8 README said "no hooks"). "Job briefing" is now "role lookup".
+- `phasis-rules`: when no Phasis tool is available and the person states a rule, the agent now says in one line that Phasis did not save it. Before, it could answer "Got it" with nothing saved.
+
 ## 0.1.8 (2026-10-25)
 
 - A hook on each prompt asks the agent to read the saved Phasis rules before work.
