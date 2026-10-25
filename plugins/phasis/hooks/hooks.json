@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo Phasis is connected. Before you answer a work request, call the Phasis start tool with the task, then follow the saved rules it returns."
+          }
+        ]
+      }
+    ]
+  }
+}

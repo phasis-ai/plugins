@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8 (2026-10-25)
+
+- A hook on each prompt asks the agent to read the saved Phasis rules before work.
+
 ## 0.1.7 (2026-10-23)
 
 - Org charts now say on the chart that they come from current job postings, not an official org chart. Evolution now quotes copy that has quotation marks in it, and it reads only from the Internet Archive, also when a page points elsewhere. Both skills say that they need Claude Code with web access and Python 3.
