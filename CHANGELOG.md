@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.13 (2026-10-28)
+
+- Broaden the phasis-rules trigger for short drafts, messages, outreach, fees and payments; direct agents to Phasis for saved rules even when chat memory has context.
+
 ## 0.1.12 (2026-10-27)
 
 - Hook: the prompt line now also asks the agent, when the work involves a job or role (for example planning, onboarding, a checklist, a process, a hire or a task that a role does), to search the Phasis World of Work for that role with `world_search` and to join what it finds with the saved team rules. Where a World result and a team rule differ, the agent follows the team rule and says so. Before, the line sent only questions about roles, jobs, employers, suppliers or chemicals to `world_search`, so a 30-day plan or a checklist for a role got the team's rules but no World of Work.
