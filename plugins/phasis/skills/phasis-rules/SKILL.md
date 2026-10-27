@@ -1,6 +1,6 @@
 ---
 name: phasis-rules
-description: The person's own saved rules and decisions for their work, kept in Phasis. Use before work on a task (writing, email, launch copy, planning, research, analysis, reports, reviews) to read them, and when the person states a rule, decision, correction or preference ("from now on", "always", "we decided", "use X, not Y") to save it. Also use for questions about who does a kind of work, what a role does, who hires for it, or about suppliers, products or chemicals: search the Phasis Worlds and show the source and date of each result. Also use when the work involves a job or role (planning, onboarding, a checklist, a process, a hire, a task that a role does): search the Phasis World of Work for that role and join it with the team's saved rules. Says in one line what it saved.
+description: "The team's saved rules, budgets, limits and decisions for work, kept in Phasis, not in chat memory. Check Phasis even when chat memory has context. Use before any work task, even short drafts (messages, email, outreach, pitches, invites, offers, fees, prices, budgets, payments, contracts, vendor replies or creator messages; launch copy, planning, research, analysis, reports, reviews) to read them, and when the person states a rule, decision, correction or preference (\"from now on\", \"always\", \"we decided\", \"use X, not Y\") to save it. Also use for questions about who does a kind of work, what a role does, who hires for it, or about suppliers, products or chemicals: search the Phasis Worlds and show the source and date of each result. Also use when the work involves a job or role (planning, onboarding, a checklist, a process, a hire, a task that a role does): search the Phasis World of Work for that role and join it with the team's saved rules. Says in one line what it saved."
 ---
 
 # Phasis rules
@@ -27,6 +27,7 @@ Definitions:
    (section 2, "Use the Worlds").
 6. When the work involves a job or role: planning, onboarding, a checklist, a process, a hire, or a task that a role does
    (section 2, "Join the World of Work with the team's rules").
+7. Before short drafts, messages, outreach, offers, fee suggestions or payment advice, read the team's saved rules from Phasis; chat memory does not replace that read. Check Phasis even when chat memory has context.
 
 If your app loads tools only when needed, search for the Phasis tools first.
 Search for these words: `Phasis`, `start`, `decision_act`, `world_search`.
