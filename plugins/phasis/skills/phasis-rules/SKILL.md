@@ -1,6 +1,6 @@
 ---
 name: phasis-rules
-description: The person's own saved rules and decisions for their work, kept in Phasis. Use before work on a task (writing, email, launch copy, planning, research, analysis, reports, reviews) to read them, and when the person states a rule, decision, correction or preference ("from now on", "always", "we decided", "use X, not Y") to save it. Also use for questions about who does a kind of work, what a role does, who hires for it, or about suppliers, products or chemicals: search the Phasis Worlds and show the source and date of each result. Says in one line what it saved.
+description: The person's own saved rules and decisions for their work, kept in Phasis. Use before work on a task (writing, email, launch copy, planning, research, analysis, reports, reviews) to read them, and when the person states a rule, decision, correction or preference ("from now on", "always", "we decided", "use X, not Y") to save it. Also use for questions about who does a kind of work, what a role does, who hires for it, or about suppliers, products or chemicals: search the Phasis Worlds and show the source and date of each result. Also use when the work involves a job or role (planning, onboarding, a checklist, a process, a hire, a task that a role does): search the Phasis World of Work for that role and join it with the team's saved rules. Says in one line what it saved.
 ---
 
 # Phasis rules
@@ -25,6 +25,8 @@ Definitions:
 4. Every time a person tells you to stop using a rule.
 5. When the task asks who does a kind of work, what a role does or who hires for it, or asks for suppliers, products or chemicals
    (section 2, "Use the Worlds").
+6. When the work involves a job or role: planning, onboarding, a checklist, a process, a hire, or a task that a role does
+   (section 2, "Join the World of Work with the team's rules").
 
 If your app loads tools only when needed, search for the Phasis tools first.
 Search for these words: `Phasis`, `start`, `decision_act`, `world_search`.
@@ -87,6 +89,21 @@ Phasis Worlds hold claims about roles, employers, suppliers, products and chemic
    Then continue with other sources, and say which statements have no source.
 
 The person's words decide. If the person names other sources, use them.
+
+### Join the World of Work with the team's rules
+
+Do this when the work involves a job or role: planning, onboarding, a checklist, a process, a hire, or a task that a role does.
+The person does not need to ask what the role does.
+
+1. Read the team's saved rules first (section 2, steps 1 to 4).
+2. Search the Phasis World of Work for that role: call `world_search` with the role title in the person's words.
+3. Join what you find with the team's saved rules in one piece of work: the duties, tools and checks from the World of Work,
+   and the team's rules for how this team does them.
+4. Where a World result and a team rule differ (for example, postings name one tool and the team uses another), follow the team rule.
+   Say so in one line: `Team rule wins: <the team rule, short> (postings say: <the World result, short>)`.
+5. Show the source and date of each World result.
+6. If the search fails or returns no result, say one line: `Phasis World not read: <short reason>`.
+   Then continue with the team's rules, and say which statements have no source.
 
 ### After a check
 
