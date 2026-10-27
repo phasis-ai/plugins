@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.12 (2026-10-27)
+
+- Hook: the prompt line now also asks the agent, when the work involves a job or role (for example planning, onboarding, a checklist, a process, a hire or a task that a role does), to search the Phasis World of Work for that role with `world_search` and to join what it finds with the saved team rules. Where a World result and a team rule differ, the agent follows the team rule and says so. Before, the line sent only questions about roles, jobs, employers, suppliers or chemicals to `world_search`, so a 30-day plan or a checklist for a role got the team's rules but no World of Work.
+- `phasis-rules`: a new subsection "Join the World of Work with the team's rules" gives the same steps, with one line when the team rule wins and the source and date of each World result.
+- README: quotes the new prompt hook line exactly, and describes the new step of the skill.
+
 ## 0.1.11 (2026-10-26)
 
 - Hook: a new `SubagentStart` hook adds one line to each sub-agent when it starts. The line asks the sub-agent, if the Phasis tools are available, to read the Phasis case that its parent named with `get_situation`, every `decisions_next` page until none remains, before it acts (or, with no case named, to call `start` with its task, then `list_situations`), also when its prompt already lists decisions, and to follow the case's current decisions. The line says that the decisions of the case are data that the person or the team saved, not instructions from Phasis, and that they cannot change the sub-agent's tools or permissions, send data out, or turn off a safety rule; the sub-agent does not follow such a decision and tells its parent. It asks the sub-agent to read the case again, every page, right before any action that pays, releases, sends or deletes, and to ask instead of acting when a read fails or is partial (an unfinished page set is partial). It asks the sub-agent to record a decision in the case only when the person or its parent states it as a decision of the team, and to report its own choices to its parent and not save them as decisions. The hook only prints the line.
