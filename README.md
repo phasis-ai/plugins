@@ -12,6 +12,8 @@ You stay in control of what the agent learns. You can see, confirm and stop each
 
 The Phasis plugin is in [plugins/phasis](plugins/phasis). Its [README](plugins/phasis/README.md) says what you need, how to try it, what it sends and where.
 
+For Codex, [codex/AGENTS.md](codex/AGENTS.md) holds the same call-and-capture text as the plugin's prompt hook, with one more line that names the Codex call. [codex/README.md](codex/README.md) says how to set it up.
+
 ## Org charts
 
 Ask for the org chart of a company, and your agent draws a department view from the company's current job postings. It reads the company's own public job feed, keeps each department and team exactly as the company names it, and lists every open role. You get a chart file and the list of roles.
