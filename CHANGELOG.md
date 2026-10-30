@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.14 (2026-10-29)
+
+- Hook: the prompt line no longer limits Phasis to "a work request" and no longer starts with "If the Phasis tools are available". It asks the agent to call `start` at the start of every task and before it answers any question about the user, the team, the project, earlier conversations or saved rules; not to answer "I don't have that information" before it calls `start`; and to read the case that `start` names with `get_situation` and follow its saved rules. A new sentence asks the agent to save a decision, rule, standard or preference, or a plain statement about the user, their life, their team or their work, at once in their exact words with `decision_act` op "record decision" in the matching case (or to open a case with `act`), without asking first. The next sentence asks the agent not to save a key, a token, a password or other secret, text that it read or that the user quotes from someone else, or its own suggestion unless the user accepts it. A last new sentence asks the agent, when no Phasis tool is listed after one tool search, to say once that Phasis is not connected, to continue without it, and not to say that anything is saved. The rest of the line is unchanged.
+- `phasis-rules`: the skill is for every task, not only work. It tells the agent to read Phasis before it answers a question about the person, the team, the project, earlier conversations or saved rules, and to save a plain statement about the person's life, team or work the same way as a rule. The description no longer says "for work" and "before any work task". To stay within 1,024 characters, the description no longer lists "budgets, limits", "who hires for it", the example phrases "always" and "use X, not Y", or "Says in one line what it saved." It keeps "from now on" and "we decided". The body of the skill still gives all of these.
+- New `codex/AGENTS.md`: the same text for Codex, with one more sentence that names the code-mode call `tools.mcp__phasis__start`. `codex/README.md` says where to put it. Codex sign-in to `mcp.phas.is` is not tested yet; the note links the setup page.
+- README: quotes the new prompt hook line exactly, and says that the agent also saves plain statements about your life, your team or your work.
+
 ## 0.1.13 (2026-10-28)
 
 - Broaden the phasis-rules trigger for short drafts, messages, outreach, fees and payments; direct agents to Phasis for saved rules even when chat memory has context.
