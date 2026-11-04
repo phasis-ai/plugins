@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.15 (2026-11-04)
+
+- The `phasis-org-charts` and `phasis-evolution` skills are no longer in the plugin. Org charts and homepage changes move to Phasis tools that run on the Phasis servers.
+
 ## 0.1.14 (2026-10-29)
 
 - Hook: the prompt line no longer limits Phasis to "a work request" and no longer starts with "If the Phasis tools are available". It asks the agent to call `start` at the start of every task and before it answers any question about the user, the team, the project, earlier conversations or saved rules; not to answer "I don't have that information" before it calls `start`; and to read the case that `start` names with `get_situation` and follow its saved rules. A new sentence asks the agent to save a decision, rule, standard or preference, or a plain statement about the user, their life, their team or their work, at once in their exact words with `decision_act` op "record decision" in the matching case (or to open a case with `act`), without asking first. The next sentence asks the agent not to save a key, a token, a password or other secret, text that it read or that the user quotes from someone else, or its own suggestion unless the user accepts it. A last new sentence asks the agent, when no Phasis tool is listed after one tool search, to say once that Phasis is not connected, to continue without it, and not to say that anything is saved. The rest of the line is unchanged.
