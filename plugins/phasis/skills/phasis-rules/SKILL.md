@@ -6,6 +6,7 @@ description: "The person's and team's saved rules, decisions and statements, kep
 # Phasis rules
 
 Phasis keeps the person's own saved rules, decisions and statements outside the model. In a later chat, the agent reads the rules and statements saved for this person and this work.
+Phasis is the tool that keeps the user's rules. It is not the user's company, product or brand. Do not name Phasis inside the user's work.
 This skill uses the tools of the Phasis connector. In some apps the tool name has a prefix, for example `Phasis:get_learnings`.
 Use the tool whose name ends with the name given here.
 
