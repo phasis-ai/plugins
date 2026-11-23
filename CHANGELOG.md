@@ -2,7 +2,9 @@
 
 ## 0.2.0 (2026-11-23)
 
-- Align the public `phasis` plugin, hooks, skills (`phasis-rules`, `phasis-launch`), README, marketplace entry, and `codex/` instructions to the live Phasis Core v2 9-tool contract (`start`, `recall`, `search`, `record`, `correct`, `run_way`, `check_work`, `upload`, `search_demand`).
+- Keep the public plugin strictly a thin connector (`phasis-rules` only); remove standalone `phasis-launch` skill so all domain workflows run server-side as Phasis Ways.
+
+- Align the public `phasis` plugin, hooks, `phasis-rules` skill, README, marketplace entry, and `codex/` instructions to the live Phasis Core v2 9-tool contract (`start`, `recall`, `search`, `record`, `correct`, `run_way`, `check_work`, `upload`, `search_demand`).
 - Remove all retired v1 tool names and align host descriptions to neutral capability language.
 - Clean public terminology across plugin docs and skills (`responsibilities`, plain punctuation, and neutral public search wording).
 - Update `codex/README.md` to `0.2.0` reflecting verified live Codex CLI OAuth/MCP sign-in to `https://mcp.phas.is/mcp`.
