@@ -1,18 +1,18 @@
 # Phasis
 
-**Agents that know the job.**
+**Agents that know the job and the world.**
 
-Phasis gives your agent the job and the world. Your agent reads the rules saved for this work: the rules and decisions that you and your team saved in Phasis. When you state a new rule or decision, the Phasis skill tells the agent to save it at once and to show one line with the Receipt for the save.
+Phasis gives your agent the job and the world. Your agent reads the rules saved for this work: the rules, decisions, corrections, and statements that you and your team saved in Phasis. When you state a new rule or decision, the Phasis skill tells the agent to save it at once and show one line with the Receipt for the save.
 
-The World of Work is live: ask who does a sales, account management, customer success or revenue operations job, and Phasis names the roles that the job needs and what each role checks. Ask for suppliers of a chemical, and the agent searches the Phasis Chemicals World and shows the source and date of each result.
+The World of Work is live: ask who does a role or how a team handles a workflow, and Phasis returns sourced responsibilities, employer tool stacks, and handoffs with dates and links. Ask for suppliers of a chemical, and the agent searches the Phasis Chemicals World and shows the source and date of each result.
 
-You stay in control of what the agent learns. You can see, confirm and stop each learning.
+You stay in control of what the agent learns. You can see, confirm, update, and stop each learning.
 
 ## The plugin
 
-The Phasis plugin is in [plugins/phasis](plugins/phasis). Its [README](plugins/phasis/README.md) says what you need, how to try it, what it sends and where.
+The Phasis plugin is in [plugins/phasis](plugins/phasis). Its [README](plugins/phasis/README.md) explains what you need, how to connect it to `https://mcp.phas.is/mcp`, what it sends, and where.
 
-For Codex, [codex/AGENTS.md](codex/AGENTS.md) holds the same call-and-capture text as the plugin's prompt hook, with one more line that names the Codex call. [codex/README.md](codex/README.md) says how to set it up.
+For Codex, [codex/AGENTS.md](codex/AGENTS.md) holds the same Core v2 instructions as the plugin hook. [codex/README.md](codex/README.md) explains how to set up Codex CLI sign-in.
 
 ## Support
 
