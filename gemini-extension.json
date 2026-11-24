@@ -1,0 +1,14 @@
+{
+  "name": "phasis",
+  "version": "0.2.0",
+  "description": "Agents that know the job and the world.",
+  "contextFileName": "plugins/phasis/skills/phasis-rules/SKILL.md",
+  "mcpServers": {
+    "phasis": {
+      "httpUrl": "https://mcp.phas.is/mcp",
+      "oauth": {
+        "enabled": true
+      }
+    }
+  }
+}
