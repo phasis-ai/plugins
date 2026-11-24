@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "phasis",
+  "version": "0.2.0",
+  "description": "Agents that know the job and the world.",
+  "author": {
+    "name": "Suasiv, Inc.",
+    "email": "support@phas.is",
+    "url": "https://phasis.ai"
+  },
+  "homepage": "https://phasis.ai",
+  "repository": "https://github.com/phasis-ai/plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "rules",
+    "decisions",
+    "learning",
+    "team",
+    "roles",
+    "mcp"
+  ]
+}
