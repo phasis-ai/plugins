@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "phasis",
-  "version": "0.2.0",
-  "description": "Agents that know the job and the world.",
+  "version": "0.2.3",
+  "description": "Phasis gives your AI sourced, dated claims and your team's rules.",
   "author": {
     "name": "Suasiv, Inc.",
     "email": "support@phas.is",

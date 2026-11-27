@@ -23,4 +23,4 @@ For Codex, [codex/AGENTS.md](codex/AGENTS.md) holds the same Core v2 instruction
 
 ## License
 
-Apache License 2.0. See [plugins/phasis/LICENSE](plugins/phasis/LICENSE).
+Apache License 2.0. See [LICENSE](LICENSE).

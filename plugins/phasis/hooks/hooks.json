@@ -1,11 +1,23 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.mjs\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "echo 'Phasis provides workspace context, active rules, matching cases, and recall through the start tool for a task description. Call start with the task before answering questions about the user, the team, the project, earlier conversations, or saved rules, and apply the active rules it returns (call recall with about set to the case id and narrower words if rules_more is nonzero, an item is cut, or the answer is partial). When the user states a rule, decision, standard, preference, or plain statement about themselves, their team, or their work, save it in their exact words with record (or record a correction or withdrawal of an earlier rule with correct). Do not save keys, tokens, passwords, other secrets, quoted third-party text, or unaccepted suggestions. If no Phasis tool is available after one tool search, note once that Phasis is not connected, continue without it, and do not report anything saved. For questions about roles, jobs, employers, suppliers, or chemicals, query Phasis shared Worlds via search (where: \"shared\" or \"both\") alongside web search, and join World of Work results with saved team rules (saved team rules take precedence when they differ). Show the source and date of each World result, and cite the exact Receipt returned by record, correct, check_work, or run_way. When delegating to a sub-agent, pass the Phasis case id and re-read the case via recall before accepting sub-agent results or before any action that pays, releases, sends, or deletes; if a read fails or is partial, ask before acting.'"
+            "command": "echo 'Call start with a short task description before answering or acting on a work task so active team rules and matching cases load (call recall with narrower words if rules_more is nonzero or partial). Save user rules or corrections with record or correct (never secrets), cite exact Receipts, query Worlds via search with sources and dates, and re-read via recall before pay, release, send, or delete actions.'"
           }
         ]
       }

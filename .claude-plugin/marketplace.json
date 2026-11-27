@@ -5,14 +5,14 @@
     "email": "support@phas.is"
   },
   "metadata": {
-    "description": "Phasis: agents that know the job and the world."
+    "description": "Phasis gives your AI sourced, dated claims and your team's rules."
   },
   "plugins": [
     {
       "name": "phasis",
       "source": "./plugins/phasis",
-      "description": "Agents that know the job and the world.",
-      "version": "0.2.0",
+      "description": "Phasis gives your AI sourced, dated claims and your team's rules.",
+      "version": "0.2.3",
       "category": "productivity"
     }
   ]

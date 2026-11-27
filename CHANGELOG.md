@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.3 (2026-11-27)
+
+- New: save your work as a private, versioned Artifact. The `phasis-rules` skill now tells the agent to save a work product (a document, brief, dataset, role, or app) with the `artifact` tool (write, revise with `expected_parent`, read, list). Each new version names the version before it, and `derived_from` links it to the Claims it rests on. Your Artifacts show in the Artifacts tab at os.phas.is. `upload` stays for raw sources, such as notes, a file, or a page to read.
+- Changed: the skill, the plugin README, the hook text, `codex/AGENTS.md` and `codex/README.md` list the new tool split. Claude, Codex, Gemini, Antigravity and HTTP get 10 tools. ChatGPT gets 9; it has no `run_way`.
+- New: a SessionStart hook (`plugins/phasis/hooks/session-start.mjs`, no dependencies). When a session starts, resumes, clears or compacts, it adds a short note on the Phasis tools. With no `PHASIS_API_KEY` set, it makes no network call. With `PHASIS_API_KEY` set, it reads up to 40 of your saved rules (8,000 characters at most) from `https://mcp.phas.is` only. It masks secrets, removes images, HTML and hidden characters from the rule text, shows a rule date only as a plain date, and says "Phasis not read" if the read fails.
+- Changed: the prompt hook now asks the agent to call `start` with a short task description before it answers or acts on a work task.
+- Added: a root LICENSE file (Apache-2.0). The text is the same file as `plugins/phasis/LICENSE`.
+- Changed: one description in every manifest: "Phasis gives your AI sourced, dated claims and your team's rules."
+- Changed: `plugin.json`, `gemini-extension.json`, the marketplace entry, `plugins/phasis/.claude-plugin/plugin.json`, `codex/README.md` and the hook user agent move to `0.2.3`.
+- Fixed: the `check_work` example in the skill names an Artifact version id (`<artifact_version_id>`), and `stale_claims` means a Claim that was withdrawn or ended.
+
 ## 0.2.0 (2026-11-23)
 
 - Keep the public plugin strictly a thin connector (`phasis-rules` only); remove standalone `phasis-launch` skill so all domain workflows run server-side as Phasis Ways.
