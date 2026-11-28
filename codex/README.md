@@ -1,6 +1,6 @@
-# Phasis for Codex (0.2.3)
+# Phasis for Codex (0.2.4)
 
-`AGENTS.md` in this folder holds the text that connects a Codex agent to the 10 Phasis Core v2 tools (`start`, `recall`, `search`, `record`, `correct`, `run_way`, `check_work`, `upload`, `artifact`, `search_demand`; ChatGPT gets 9, with `run_way` omitted). It aligns with the `0.2.3` Phasis plugin for Claude Code (`SessionStart`, imperative `UserPromptSubmit`, and `SubagentStart`), includes the F-13 user-data boundary for saved rules, and adds the Codex code-mode call `tools.mcp__phasis__start`.
+`AGENTS.md` in this folder holds the text that connects a Codex agent to the 10 Phasis Core v2 tools (`start`, `recall`, `search`, `record`, `correct`, `run_way`, `check_work`, `upload`, `artifact`, `search_demand`; ChatGPT gets 9, with `run_way` omitted). It aligns with the `0.2.4` Phasis plugin for Claude Code (`SessionStart`, imperative `UserPromptSubmit`, and `SubagentStart`), includes the F-13 user-data boundary for saved rules, and adds the Codex code-mode call `tools.mcp__phasis__start`.
 
 Why Codex needs this text: in code mode, Codex keeps MCP tools inside its `exec` tool. The model does not see the Phasis tool names or the Phasis server instructions. Without this text, the agent seldom calls Phasis (1 of 118 test questions).
 

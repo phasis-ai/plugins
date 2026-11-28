@@ -12,7 +12,7 @@
       "name": "phasis",
       "source": "./plugins/phasis",
       "description": "Phasis gives your AI sourced, dated claims and your team's rules.",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "category": "productivity"
     }
   ]

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.4 (2026-11-28)
+
+- Changed: the `phasis-rules` skill description now leads with when to open the skill: before the first answer in every conversation when Phasis is connected, even when another skill also applies (including research, writing, strategy, and chats that move into the person's work), and immediately when the person states a rule, preference, decision, or correction, even mid-conversation. It clarifies that Phasis is separate from Claude or ChatGPT built-in memory, and that host memory does not cover Phasis.
+- Changed: section 1 of `phasis-rules` opens with "Host memory does not replace Phasis" and adds a drift trigger when a conversation moves into the person's work.
+- Changed: `phasis-rules` and the SessionStart hook clarify that `handback` only closes a tracked task taken by the agent, never general product feedback.
+- Changed: the SessionStart hook includes the host-memory notice in both keyless and keyed output without changing how rules are read, filtered, or masked.
+- Fixed: replaced a personal name in the skill worked example with "the team lead".
+- Changed: bumped `plugin.json`, `gemini-extension.json`, `.claude-plugin/marketplace.json`, `plugins/phasis/.claude-plugin/plugin.json`, `plugins/phasis/README.md`, `codex/README.md`, and the SessionStart hook user agent to `0.2.4`.
+
 ## 0.2.3 (2026-11-27)
 
 - New: save your work as a private, versioned Artifact. The `phasis-rules` skill now tells the agent to save a work product (a document, brief, dataset, role, or app) with the `artifact` tool (write, revise with `expected_parent`, read, list). Each new version names the version before it, and `derived_from` links it to the Claims it rests on. Your Artifacts show in the Artifacts tab at os.phas.is. `upload` stays for raw sources, such as notes, a file, or a page to read.
